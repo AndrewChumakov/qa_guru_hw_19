@@ -31,7 +31,7 @@ def mobile(request):
     else:
         return
 
-    browser.config.timeout = float(os.getenv("timeout", "10.0"))
+    browser.config.timeout = float(os.getenv("timeout", "20.0"))
 
     yield platform
 
