@@ -6,7 +6,7 @@ from selene import have, browser
 
 def test_search(mobile):
     if mobile == "android":
-        pytest.skip("Test android")
+        pytest.skip("Test ios")
     with allure.step("Input text"):
         browser.element((AppiumBy.ACCESSIBILITY_ID, "Text Button")).click()
         browser.element((AppiumBy.ACCESSIBILITY_ID, "Text Input")).send_keys("Algebra\n")

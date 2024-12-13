@@ -6,7 +6,7 @@ from selene import have, browser
 
 def test_open(mobile):
     if mobile == "ios":
-        pytest.skip("Test ios")
+        pytest.skip("Test android")
     with allure.step("Type search"):
         browser.element((AppiumBy.ACCESSIBILITY_ID, "Search Wikipedia")).click()
         browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/search_src_text")).type("Appium")
@@ -18,7 +18,7 @@ def test_open(mobile):
 
 def test_search(mobile):
     if mobile == "ios":
-        pytest.skip("Test ios")
+        pytest.skip("Test android")
     with allure.step("Type search"):
         browser.element((AppiumBy.ACCESSIBILITY_ID, "Search Wikipedia")).click()
         browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/search_src_text")).type("Algebra")
