@@ -12,7 +12,7 @@ from utils import attach
 def pytest_addoption(parser):
     parser.addoption(
         "--platform",
-        default="android"
+        default="ios"
     )
 
 @pytest.fixture(scope="session", autouse=True)
@@ -26,7 +26,7 @@ def mobile(request):
         options = android_options()
         browser.config.driver = webdriver.Remote(os.getenv("URL"), options=options)
     elif platform == "ios":
-        options = android_options()
+        options = ios_options()
         browser.config.driver = webdriver.Remote(os.getenv("URL"), options=options)
     else:
         return
